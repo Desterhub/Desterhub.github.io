@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harsh Shah | Software Developer, Generative AI, Data Engineering</title>
+<meta name="description" content="Harsh Shah’s developer portfolio: AI platforms, full-stack apps and data projects, with an AI assistant that answers questions about his work.">
+<meta property="og:title" content="Harsh Shah’s Digital Universe">
+<meta property="og:description" content="Where code meets intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060814;--bg2:#0c1124;--glass:#0e1730b0;--dot:#ffffff0c;--ink:#e9efff;--mut:#93a3c4;--line:#233252;--blue:#35d6ff;--vio:#a855ff;--org:#ff5fd2;--on:#060814;
+--sans:'Sora','Segoe UI',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);overflow-x:hidden}
+button,input,textarea{font:inherit;color:inherit}button{cursor:pointer}a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+nav.n{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 24px 12px;backdrop-filter:blur(14px);background:var(--glass);border-bottom:1px solid var(--line)}
+.n b{font:800 17px var(--sans)}.n div{display:flex;gap:6px;align-items:center}.n a.l{padding:6px 12px;color:var(--mut);text-decoration:none;font-size:14px;border-radius:8px}.n a.l:hover{color:var(--ink)}
+.pill{border:1px solid var(--line);background:var(--glass);border-radius:999px;padding:6px 13px;font:500 12px var(--mono)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 78% 35%,#a855ff30,transparent 55%),radial-gradient(ellipse at 12% 88%,#35d6ff1f,transparent 50%),linear-gradient(var(--bg),var(--bg2))}
+#gl{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:60px;pointer-events:none}.hero .wrap>*{pointer-events:auto}
+.live{display:inline-flex;gap:9px;align-items:center;margin-bottom:22px}.live i{width:8px;height:8px;border-radius:50%;background:#2fe38f;animation:pg 2s infinite}
+@keyframes pg{70%{box-shadow:0 0 0 9px #2fe38f00}0%{box-shadow:0 0 0 0 #2fe38f99}}
+h1{font:800 clamp(42px,8vw,104px)/.98 var(--sans);letter-spacing:-.04em;margin:0;max-width:9em}
+h1 span{background:linear-gradient(90deg,var(--blue),var(--vio),var(--org));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(18px,2.4vw,26px);margin:18px 0 8px;max-width:26em;font-weight:600}.stack{font:500 14px var(--mono);color:var(--mut);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;border:1px solid var(--line);background:var(--glass);font-weight:600;font-size:15px;text-decoration:none;color:var(--ink);backdrop-filter:blur(8px)}
+.btn.p{background:linear-gradient(90deg,var(--blue),var(--vio));border:0;color:#fff}.btn:hover{transform:translateY(-2px)}
+.term{max-width:430px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);font:400 13px/1.7 var(--mono);min-height:132px}
+.term .ok{color:#2fe38f}.term .pr{color:var(--org)}
+.hint{position:absolute;bottom:18px;left:24px;z-index:2;font:500 12px var(--mono);color:var(--mut)}kbd{border:1px solid var(--line);border-radius:5px;padding:0 6px}
+/* sections */
+section{padding:110px 0 0}
+h2{font:800 clamp(30px,5vw,54px)/1.05 var(--sans);letter-spacing:-.035em;margin:0 0 12px}
+.lead{color:var(--mut);max-width:40em;margin:0 0 34px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}.filters button{border:1px solid var(--line);background:var(--glass);border-radius:999px;padding:7px 15px;font:500 13px var(--mono)}
+.filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--on)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px}
+.card{position:relative;border-radius:18px;padding:2px;background:var(--line);transform-style:preserve-3d;transition:transform .15s}
+.card:before{content:"";position:absolute;inset:0;border-radius:18px;background:conic-gradient(from var(--a,0deg),var(--blue),var(--vio),var(--org),var(--blue));opacity:0;transition:opacity .3s}
+.card:hover:before,.card:focus-within:before{opacity:1;animation:sp 3s linear infinite}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}@keyframes sp{to{--a:360deg}}
+.in{position:relative;background:var(--bg2);border-radius:16px;padding:22px;height:100%;display:flex;flex-direction:column;gap:12px}
+.in h3{margin:0;font:700 22px var(--sans);letter-spacing:-.02em}.in p{margin:0;color:var(--mut);font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;font:500 12px var(--mono);color:var(--mut)}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.badges i{font:500 11px var(--mono);font-style:normal;padding:3px 9px;border-radius:6px;border:1px solid var(--line)}
+.cat{color:var(--org)!important;border-color:var(--org)!important}
+details.more summary{cursor:pointer;font:600 13px var(--mono);color:var(--blue)}details.more ul{margin:10px 0 0;padding-left:18px;color:var(--mut);font-size:14.5px}
+.acts{display:flex;gap:10px;margin-top:auto}.acts a{font:600 13px var(--mono);text-decoration:none;border:1px solid var(--line);padding:7px 13px;border-radius:9px}.acts a:first-child{background:var(--blue);border-color:var(--blue);color:var(--on)}
+.note{font:400 12px var(--mono);color:var(--mut);margin-top:16px}
+/* panels */
+.glass{border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);border-radius:18px;padding:22px}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+#cons{width:100%;height:clamp(320px,44vw,460px);display:block;touch-action:pan-y;cursor:grab}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.chips button{border:1px solid var(--line);background:var(--bg2);border-radius:8px;padding:5px 11px;font:500 12px var(--mono)}.chips button[aria-pressed="true"]{border-color:var(--org);color:var(--org)}.chips button.dim{opacity:.55;border-style:dashed}
+.bar{display:grid;grid-template-columns:110px 1fr 28px;gap:10px;align-items:center;font:500 12px var(--mono);margin:7px 0}.bar span{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--vio))}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.stat div{text-align:center}.stat b{display:block;font:800 30px var(--sans)}.stat small{font:500 11px var(--mono);color:var(--mut)}
+.ul{list-style:none;margin:0;padding:0;font:400 13px/1.9 var(--mono)}.ul li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line)}
+#mres{margin-top:16px;font-size:15px}#mres .r{padding:12px 0;border-bottom:1px solid var(--line)}#mres b{font-size:16px}
+.tl{position:relative;margin-left:12px;border-left:2px solid var(--line)}.tl>details{padding:0 0 18px 26px;position:relative}
+.tl>details:before{content:"";position:absolute;left:-9px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--vio);box-shadow:0 0 14px var(--vio)}
+.tl summary{cursor:pointer;font:700 18px var(--sans)}.tl small{display:block;font:500 12px var(--mono);color:var(--mut)}.tl ul{color:var(--mut);margin:8px 0 0;padding-left:18px;font-size:15px}
+.contact{text-align:center;padding:120px 0 80px}.contact h2{font-size:clamp(34px,7vw,84px);line-height:.98}
+.contact form{max-width:520px;margin:30px auto 0;text-align:left;display:grid;gap:12px}.contact input,.contact textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg2)}
+.contact .hp{position:absolute;left:-9999px}.err{color:var(--org);font:500 12px var(--mono);min-height:16px}
+footer{text-align:center;color:var(--mut);font:400 12px var(--mono);padding:0 0 40px}
+/* assistant + terminal */
+#fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:10px;align-items:center;padding:12px 18px;border-radius:999px;border:1px solid var(--vio);background:var(--glass);backdrop-filter:blur(12px);font-weight:700;box-shadow:0 0 28px #9b6bff55}
+#fab i{width:10px;height:10px;border-radius:50%;background:var(--vio);box-shadow:0 0 12px var(--vio);animation:pg2 2.4s infinite}@keyframes pg2{50%{transform:scale(1.5)}}
+#ai{position:fixed;right:18px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:30;width:min(400px,calc(100vw - 36px));height:min(560px,70vh);display:none;flex-direction:column;border:1px solid var(--vio);border-radius:18px;background:var(--bg2);box-shadow:0 20px 70px #0008;overflow:hidden}
+#ai.on{display:flex}#ai header{padding:14px 16px;border-bottom:1px solid var(--line);font-weight:700;display:flex;justify-content:space-between;align-items:center}
+#ai header small{display:block;font:400 11px var(--mono);color:var(--mut)}#log{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:92%;padding:10px 13px;border-radius:13px;font-size:14px;line-height:1.55}.m p{margin:0 0 6px}.m p:last-child{margin:0}.m ul{margin:4px 0 6px;padding-left:18px}
+.m.u{align-self:flex-end;background:linear-gradient(90deg,var(--blue),var(--vio));color:#fff}.m.a{align-self:flex-start;border:1px solid var(--line);background:var(--glass)}
+#ai .sg{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 8px}#ai .sg button{border:1px solid var(--line);background:none;border-radius:999px;padding:4px 10px;font:500 11px var(--mono)}
+#ai form{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid var(--line)}#ai input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
+#ai form button{border:0;border-radius:10px;background:var(--vio);color:#fff;padding:0 14px;font-weight:700}
+#tm{position:fixed;inset:auto 0 0;z-index:40;display:none;height:min(46vh,380px);background:#05070dee;color:#cfe3ff;border-top:1px solid var(--blue);font:400 13px/1.6 var(--mono);flex-direction:column;backdrop-filter:blur(8px)}
+#tm.on{display:flex}
+#tm .th{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 18px;border-bottom:1px solid #223049;background:#0a1020;font:500 12px var(--mono);color:#93a3c4}#tm .th b{color:#35d6ff}
+#tx{border:1px solid #ff5fd2;background:none;color:#ff5fd2;border-radius:8px;padding:4px 12px;font:600 12px var(--mono)}#tx:hover{background:#ff5fd2;color:#060814}
+#tlog{flex:1;overflow:auto;padding:14px 18px;white-space:pre-wrap}#tm form{display:flex;gap:8px;padding:10px 18px 14px;border-top:1px solid #223049}#tm input{flex:1;background:none;border:0;outline:0;color:#fff;font:inherit}
+#tm .c{color:#3da9ff}#tm .o{color:#ff8a3d}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
+#cur{position:fixed;z-index:50;pointer-events:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--blue);transform:translate(-50%,-50%);transition:width .15s,height .15s;display:none;mix-blend-mode:normal}
+body.dev #fps{display:block}#fps{display:none;position:fixed;left:12px;bottom:12px;z-index:60;background:#000c;color:#2fe38f;font:500 12px var(--mono);padding:6px 10px;border-radius:8px}
+body.dev .card,body.dev .glass{outline:1px dashed var(--org)}
+@media (pointer:fine){body.cur,body.cur *{cursor:none!important}body.cur #cur{display:block}}
+@media (max-width:860px){.two{grid-template-columns:1fr}.n a.l{display:none}.hero .wrap{padding-top:110px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+body{background-image:radial-gradient(var(--dot) 1px,transparent 1.2px);background-size:26px 26px}
+#prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--blue),var(--vio),var(--org))}
+.n a.l.on{color:var(--ink);background:var(--glass);box-shadow:inset 0 0 0 1px var(--line)}
+main{counter-reset:s}main section h2:before{counter-increment:s;content:"0" counter(s);display:block;font:500 13px var(--mono);color:var(--vio);letter-spacing:.14em;margin-bottom:8px}
+.sum{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:20px;align-items:start;margin-top:28px}
+.sum h3{font:800 20px var(--sans);margin:0 0 4px}.sum small{font:500 12px var(--mono);color:var(--mut)}
+.sum .k b{display:block;font:800 40px/1.05 var(--sans);background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}.sum .k span{font-size:14px;color:var(--mut);line-height:1.45;display:block}
+.sum .row2{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-top:1px solid var(--line);padding-top:16px}
+.tick{overflow:hidden;margin-top:34px;border-block:1px solid var(--line);padding:12px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tick div{display:flex;gap:34px;width:max-content;animation:tk 50s linear infinite;font:500 13px var(--mono);color:var(--mut)}.tick:hover div{animation-play-state:paused}.tick span:nth-child(odd){color:var(--ink)}
+@keyframes tk{to{transform:translateX(-50%)}}
+.in{padding:0;gap:0;overflow:hidden}
+.in:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;border-radius:inherit;background:radial-gradient(360px circle at var(--mx,50%) var(--my,0%),hsl(var(--h) 100% 70%/.16),transparent 55%)}.card:hover .in:after{opacity:1}
+.bf{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line);font:500 11px var(--mono);color:var(--mut)}
+.bf i{width:9px;height:9px;border-radius:50%;background:#ff5f57}.bf i:nth-child(2){background:#febc2e}.bf i:nth-child(3){background:#28c840}.bf span{margin-left:8px;padding:2px 12px;border-radius:999px;background:var(--glass);border:1px solid var(--line);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:radial-gradient(circle at 12% 15%,hsl(var(--h) 95% 58%/.5),transparent 55%),radial-gradient(circle at 88% 85%,hsl(calc(var(--h) + 70) 95% 62%/.4),transparent 55%),var(--bg2)}
+.shot:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#ffffff40 1px,transparent 1.3px);background-size:14px 14px;-webkit-mask-image:linear-gradient(90deg,#000,transparent);mask-image:linear-gradient(90deg,#000,transparent)}
+.shot img{position:relative;width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot b{position:absolute;right:16px;bottom:-16px;font:800 96px/1 var(--sans);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px #ffffff80}
+.shot u{position:absolute;left:14px;top:14px;display:inline-flex;gap:7px;align-items:center;text-decoration:none;font:600 11px var(--mono);padding:4px 10px;border-radius:999px;background:#000a;color:#fff;border:1px solid #ffffff30}.shot u s{width:7px;height:7px;border-radius:50%;background:#2fe38f;animation:pg 2s infinite}
+.shot em{position:absolute;right:12px;top:12px;z-index:2;font:700 11px var(--mono);font-style:normal;padding:4px 10px;border-radius:999px;background:linear-gradient(90deg,var(--vio),var(--org));color:#fff}
+.bd{position:relative;padding:20px 22px 22px;display:flex;flex-direction:column;gap:13px;flex:1}.bd h3{margin:0;font:800 22px var(--sans);letter-spacing:-.025em}.bd p{margin:0;color:var(--mut);font-size:15px}
+.acts button{font:600 13px var(--mono);border:0;padding:9px 16px;border-radius:10px;background:linear-gradient(90deg,var(--blue),var(--vio));color:#fff}.acts a:first-child{background:none;border:1px solid var(--line);color:var(--ink)}
+dialog{border:1px solid var(--line);border-radius:18px;background:var(--bg2);color:var(--ink);padding:0;box-shadow:0 30px 90px #000a}dialog::backdrop{background:#02040dcc;backdrop-filter:blur(4px)}
+#cs{width:min(780px,94vw);max-height:88vh}#csb{padding:clamp(20px,4vw,36px);overflow:auto;max-height:88vh}#csx{position:absolute;right:14px;top:14px}
+#cs h3{font:800 clamp(26px,4vw,38px) var(--sans);letter-spacing:-.03em;margin:6px 0}#cs h4{font:700 12px var(--mono);color:var(--org);margin:24px 0 8px;letter-spacing:.08em;text-transform:uppercase}#cs ul{color:var(--mut);padding-left:20px}#cs p{margin:0 0 6px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flow span{padding:9px 13px;border:1px solid var(--line);border-radius:10px;background:var(--glass);font:500 12.5px var(--mono)}.flow i{color:var(--vio);font-style:normal}
+#pal{width:min(560px,92vw);margin:12vh auto 0}#pq{width:100%;border:0;border-bottom:1px solid var(--line);background:none;color:inherit;font:500 18px var(--sans);padding:18px 20px;outline:0}
+#pr{list-style:none;margin:0;padding:8px;max-height:50vh;overflow:auto}#pr li{padding:11px 14px;border-radius:10px;cursor:pointer}#pr li[aria-selected="true"]{background:linear-gradient(90deg,var(--blue),var(--vio));color:#fff}
+#jd{width:100%;min-height:200px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);resize:vertical;font:400 14px/1.6 var(--sans);margin-bottom:14px}#jd:focus{outline:2px solid var(--blue)}
+#jdout h4{font:700 12px var(--mono);color:var(--org);margin:20px 0 8px;letter-spacing:.08em;text-transform:uppercase}.meter{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:8px}.meter span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--vio),var(--org));transition:width .9s}
+.badges i.ok{border-color:#2fe38f;color:#2fe38f}.badges i.no{border-color:var(--org);color:var(--org)}.jai p{margin:0 0 8px}.jai ul{padding-left:20px;margin:4px 0 8px}
+@media (max-width:860px){.sum{grid-template-columns:1fr 1fr}.sum>div:first-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){.tick div{animation:none}}
+/* fluid layout: use the whole screen, from phones to ultra-wide monitors */
+.wrap{width:100%;max-width:1760px;padding-inline:clamp(16px,4vw,72px)}
+nav.n{padding-inline:clamp(16px,4vw,72px)}
+.hint{left:clamp(16px,4vw,72px)}
+h1{font-size:clamp(42px,8vw,128px)}
+.sub{font-size:clamp(18px,2.2vw,32px)}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.two{gap:clamp(16px,2vw,32px)}
+@media (min-width:1700px){body{font-size:18px}.lead{font-size:19px}.term{max-width:520px}}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.grid{grid-template-columns:1fr}.sum{grid-template-columns:1fr}.hero .wrap{padding-top:100px}.stat{gap:8px}.stat b{font-size:24px}section{padding-top:80px}.contact{padding:80px 0 60px}}
+</style>
+</head>
+<body class="cur">
+<div id="prog" aria-hidden="true"></div>
+<nav class="n" aria-label="Main"><b>Harsh Shah</b><div><a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#fit">Analyzer</a><a class="l" href="#github">GitHub</a><a class="l" href="#about">About</a><a class="l" href="#contact">Contact</a><button class="pill" id="kbtn" aria-label="Open command menu">⌘K</button><button class="pill" id="tbtn" aria-label="Open terminal">~ terminal</button></div></nav>
+
+<header class="hero" id="top">
+  <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="wrap">
+    <span class="pill live"><i></i>Open to Opportunities</span>
+    <h1>Hey, I’m <span>Harsh Shah.</span></h1>
+    <p class="sub">Engineering Ideas Into Intelligent Digital Experiences.</p>
+    <p class="stack">Software Developer | Generative AI | Data Engineering | Full-Stack Development</p>
+    <div class="btns"><a class="btn p" href="#skills">Explore My Universe</a><a class="btn" href="#projects">View My Projects</a></div>
+    <div class="term" id="boot" aria-label="Startup log"></div>
+  </div>
+  <div class="hint">Press <kbd>~</kbd> for the terminal · drag the skill universe · try the Konami code</div>
+</header>
+<div class="wrap"><div class="sum glass" id="sum"></div><div class="tick" aria-hidden="true"><div id="tk"></div></div></div>
+
+<main class="wrap">
+<section id="projects">
+  <h2>Project Universe</h2>
+  <p class="lead">Six public repositories from github.com/Desterhub. Summaries are written from each repo’s README, file structure and dependencies.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note" id="snap"></p>
+</section>
+
+<section id="skills">
+  <h2>Skill Constellation</h2>
+  <p class="lead">Drag to rotate, click a skill to light up everything connected to it. Links come from what is actually used in the repositories.</p>
+  <div class="two">
+    <div class="glass"><canvas id="cons" aria-label="3D skill constellation"></canvas></div>
+    <div class="glass"><b id="sktitle">Pick a skill</b><div class="chips" id="skchips" role="group" aria-label="Skills"></div><div id="skinfo" class="lead" style="margin:0">Each dashed skill is one Harsh lists but that has no public repository evidence yet.</div></div>
+  </div>
+</section>
+
+<section id="match">
+  <h2>AI Project Matchmaker</h2>
+  <p class="lead">Choose a role and get the projects that fit it best, with the reasons.</p>
+  <div class="glass"><div class="chips" id="roles" role="group" aria-label="Roles"></div><div id="mres" aria-live="polite">Select a role above.</div></div>
+</section>
+
+<section id="fit">
+  <h2>Fit Analyzer</h2>
+  <p class="lead">Paste a job description. See how Harsh’s real projects and skills match it, with an honest list of gaps.</p>
+  <div class="two"><div class="glass"><textarea id="jd" placeholder="Paste a job description here…" aria-label="Job description"></textarea><div class="btns" style="margin:0"><button class="btn p" id="jdgo">Analyze fit</button><button class="btn" id="jdex">Try an example</button></div></div><div class="glass" id="jdout" aria-live="polite">Results appear here.</div></div>
+</section>
+
+<section id="github">
+  <h2>GitHub Activity</h2>
+  <p class="lead">A snapshot of the public profile. It is a snapshot because this hosted page cannot call the GitHub API directly.</p>
+  <div class="two">
+    <div class="glass"><div class="stat" id="stat"></div><div id="langs"></div></div>
+    <div class="glass"><b>Latest project updates</b><ul class="ul" id="recent" style="margin-top:10px"></ul></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Beyond the Code</h2>
+  <p class="lead">Fourth-year engineering student at DJ Sanghvi College of Engineering, interested in software development, generative AI, data engineering, data science, business analytics and full-stack development. Harsh joins business understanding with technical building.</p>
+  <div class="tl" id="tl"></div>
+</section>
+</main>
+
+<div class="contact wrap" id="contact">
+  <h2>Have an Idea?<br>Let’s Engineer It.</h2>
+  <div class="btns" style="justify-content:center;margin-top:28px" id="cbtns"></div>
+  <form id="cform" novalidate hidden>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>Name<input id="cn" required maxlength="80"></label>
+    <label>Email<input id="ce" type="email" required maxlength="120"></label>
+    <label>Message<textarea id="cm" rows="4" required maxlength="1200"></textarea></label>
+    <div class="err" id="cerr" role="alert"></div>
+    <button class="btn p" type="submit">Send message</button>
+  </form>
+</div>
+<footer>© <span id="yr"></span> Harsh Shah · Where code meets intelligence.</footer>
+
+<button id="fab" aria-expanded="false" aria-controls="ai"><i></i>Ask Harsh AI</button>
+<section id="ai" aria-label="Ask Harsh AI" style="padding:0">
+  <header><div>Ask Harsh AI<small id="mode">Powered by Claude, grounded in this portfolio</small></div><button class="pill" id="aix" aria-label="Close">close</button></header>
+  <div id="log" aria-live="polite"></div><div class="sg" id="sg"></div>
+  <form id="aif"><input id="aiq" placeholder="Ask about Harsh’s work" aria-label="Question" autocomplete="off"><button>Ask</button></form>
+</section>
+<dialog id="cs" aria-label="Case study"><button class="pill" id="csx" aria-label="Close">close</button><div id="csb"></div></dialog>
+<dialog id="pal" aria-label="Command menu"><input id="pq" placeholder="Jump to a section, project or action" aria-label="Search" autocomplete="off"><ul id="pr" role="listbox"></ul></dialog>
+<div id="tm" role="dialog" aria-label="Terminal"><div class="th"><span>harsh@universe: ~ &nbsp;·&nbsp; type <b>exit</b>, press <b>Esc</b>, or click close</span><button type="button" id="tx" aria-label="Close terminal">✕ close</button></div><div id="tlog"></div><form id="tf"><span class="c">harsh@universe:~$</span><input id="ti" autocomplete="off" spellcheck="false" aria-label="Command"></form></div>
+<canvas id="net" aria-hidden="true"></canvas><div id="cur"></div><div id="fps">fps</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ===== CONFIG: add these three to switch on the email form, LinkedIn and resume buttons ===== */
+const CFG={email:"",linkedin:"",resume:"",gh:"https://github.com/Desterhub",snap:"18 Nov 2026"};
+/* ================================================================================================ */
+const P=[
+{id:"ClampFinderApp",cats:["Artificial Intelligence","Full-Stack Development","Automation"],langs:["Python","JavaScript"],stack:["FastAPI","Next.js 16","React 19","PyMuPDF","pandas","Tailwind v4"],star:0,fork:0,upd:"2026-10-09",live:"",
+ d:"An AI-powered B2B lead-intelligence platform for industrial suppliers. It turns trade-show catalogues, PDFs and booth photos into verified companies and decision-maker contacts.",
+ hl:["Parses multi-page PDFs and brochures, including embedded images","Reverse visual sourcing: uses Google Lens search to identify unlabeled logos and booth photos","Waterfall enrichment pipelines (Apollo and SerpAPI) to find company domains and contacts","FastAPI backend with a Next.js dashboard"]},
+{id:"TicketScan",cats:["Artificial Intelligence","Full-Stack Development","Software Engineering"],langs:["TypeScript"],stack:["Next.js 16","TypeScript","Supabase","Tailwind CSS"],star:0,fork:0,upd:"2026-10-23",live:"https://ticketscan-xndj.onrender.com",
+ d:"A travel-document intelligence system. It extracts data from flight, rail and bus tickets and runs forensic checks to flag tampered or edited documents.",
+ hl:["Multi-modal extraction from PDF and image tickets across airlines, Indian Railways and bus vouchers","Forensic pipeline to detect text edits, date changes and font anomalies","Supabase (PostgreSQL) backend with auth and an admin area","Live demo available"]},
+{id:"Agrogyanchatgpt",cats:["Artificial Intelligence","Full-Stack Development"],langs:["JavaScript","Python"],stack:["FastAPI","JavaScript","HTML/CSS","PostgreSQL driver","OCR (Tesseract)"],star:0,fork:0,upd:"2026-06-01",live:"",
+ d:"AgroGyanGPT is an agricultural assistant for farmers, combining advice, a community space and a multilingual interface.",
+ hl:["Multilingual support for accessibility","Community posts, likes and comments","User authentication and a multi-page farmer interface (dashboard, shop, schemes, cart)","OCR-based queries are described as planned or partial"]},
+{id:"gmail-sender",cats:["Automation","Full-Stack Development","Software Engineering"],langs:["JavaScript"],stack:["React 18","Vite","Node.js","Express","SQLite","Gmail API"],star:0,fork:0,upd:"2026-10-09",live:"",
+ d:"A Gmail bulk-sender and campaign manager that sends personalized emails through the official Gmail API, with live progress and an audit history.",
+ hl:["Google OAuth 2.0 with AES-256-GCM encrypted token storage","Server-Sent Events for live sending progress, plus throttling controls","SQLite in WAL mode for campaign history","React dashboard with dark and light mode"]},
+{id:"Bitcoin-Price-Prediction",cats:["Machine Learning","Data Analytics","Artificial Intelligence"],langs:["Jupyter Notebook"],stack:["Python","Linear Regression","Logistic Regression","RSI and volume indicators"],star:1,fork:0,upd:"2026-05-06",live:"",
+ d:"A machine-learning dashboard that explores Bitcoin price data and forecasts trends, with market indicators and trading-style signals.",
+ hl:["Exploratory data analysis and feature engineering","Linear and logistic regression models","RSI and volume analysis","Forecast visualization with projection bands and Bullish, Hold or Watch signals"]},
+{id:"Bank-loan-dashboard",cats:["Data Analytics"],langs:["Power BI"],stack:["Power BI","Excel"],star:0,fork:0,upd:"2026-03-26",live:"",
+ d:"An interactive Power BI dashboard that analyzes loan approval trends.",
+ hl:["KPIs: total applications, approval rate and average loan amount","Interactive slicers for filtering","Insight: applicants with strong credit history have much higher approval rates"]}];
+const ALL=P.map(p=>p.id);
+const SK=[["Python",["ClampFinderApp","Agrogyanchatgpt","Bitcoin-Price-Prediction"]],["JavaScript",["gmail-sender","Agrogyanchatgpt"]],["TypeScript",["TicketScan"]],["React",["ClampFinderApp","gmail-sender"]],["Next.js",["ClampFinderApp","TicketScan"]],["Node.js",["gmail-sender"]],["FastAPI",["ClampFinderApp","Agrogyanchatgpt"]],["SQL",["gmail-sender","TicketScan"]],["Power BI",["Bank-loan-dashboard"]],["Machine Learning",["Bitcoin-Price-Prediction"]],["Data Engineering",["ClampFinderApp"]],["APIs",["gmail-sender","ClampFinderApp","TicketScan"]],["Git",ALL],["GitHub",ALL],["Generative AI",[]]];
+const ROLES={"Software Developer":["Full-Stack Development","Software Engineering","Automation"],"AI Engineer":["Artificial Intelligence","Machine Learning","Generative AI"],"Data Analyst":["Data Analytics","Machine Learning"],"Data Engineer":["Data Analytics","Automation","Artificial Intelligence"],"Full-Stack Developer":["Full-Stack Development"]};
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=d=>new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+$("yr").textContent=new Date().getFullYear();
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* projects */
+const cats=[...new Set(P.flatMap(p=>p.cats))];let fc="All";
+$("filters").innerHTML=["All",...cats].map(c=>`<button aria-pressed="${c=="All"}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+$("snap").textContent="Repository data snapshot taken "+CFG.snap+". Stars and dates may have changed since.";
+const FEAT=["ClampFinderApp","TicketScan"],HUE=[195,285,150,320,35,215],INI=["CF","TS","AG","GS","BP","BL"],LC={Python:"#3572A5",JavaScript:"#f1e05a",TypeScript:"#3178c6","Jupyter Notebook":"#DA5B0B","Power BI":"#f2c811"};
+function cards(){$("grid").innerHTML=P.filter(p=>fc=="All"||p.cats.includes(fc)).map(p=>{const i=P.indexOf(p);return `<article class="card" data-id="${p.id}" style="--h:${HUE[i]}"><div class="in">
+<div class="bf"><i></i><i></i><i></i><span>github.com/Desterhub/${esc(p.id)}</span></div>
+<div class="shot">${p.img?`<img src="${p.img}" alt="Screenshot of ${esc(p.id)}" loading="lazy">`:`<b>${INI[i]}</b>`}${FEAT.includes(p.id)?"<em>★ Featured</em>":""}${p.live?'<u><s></s>Live demo</u>':""}</div>
+<div class="bd"><h3>${esc(p.id)}</h3><div class="meta"><span>★ ${p.star}</span><span>⑂ ${p.fork}</span><span><s style="display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:${LC[p.langs[0]]||"#888"}"></s>${esc(p.langs.join(" · "))}</span><span>Updated ${fmt(p.upd)}</span></div>
+<p>${esc(p.d)}</p><div class="badges">${p.cats.map(c=>`<i class="cat">${esc(c)}</i>`).join("")}${p.stack.map(s=>`<i>${esc(s)}</i>`).join("")}</div>
+<div class="acts"><button data-cs="${p.id}">Case study</button><a href="${CFG.gh}/${p.id}" target="_blank" rel="noopener">View code ↗</a>${p.live?`<a href="${esc(p.live)}" target="_blank" rel="noopener">Live demo ↗</a>`:""}</div></div></div></article>`}).join("")}
+$("filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;fc=b.dataset.c;$("filters").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x==b));cards()});
+$("grid").addEventListener("pointermove",e=>{const c=e.target.closest(".card");if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px");if(reduce||e.pointerType=="touch")return;const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`});
+$("grid").addEventListener("pointerout",e=>{const c=e.target.closest(".card");if(c)c.style.transform=""});
+
+/* github snapshot */
+const lc={};P.forEach(p=>lc[p.langs[0]]=(lc[p.langs[0]]||0)+1);
+$("stat").innerHTML=`<div><b data-n="${P.length}">0</b><small>public repos</small></div><div><b data-n="${P.reduce((a,p)=>a+p.star,0)}">0</b><small>stars</small></div><div><b data-n="${Object.keys(lc).length}">0</b><small>primary languages</small></div>`;
+$("langs").innerHTML="<b>Primary language by repository</b>"+Object.entries(lc).map(([k,v])=>`<div class="bar"><em style="font-style:normal">${esc(k)}</em><span style="width:${v/P.length*100}%"></span><b>${v}</b></div>`).join("");
+$("recent").innerHTML=[...P].sort((a,b)=>b.upd.localeCompare(a.upd)).map(p=>`<li><span>${esc(p.id)}</span><span>${fmt(p.upd)}</span></li>`).join("");
+
+/* timeline: only facts Harsh provided or that are in the repos */
+$("tl").innerHTML=[
+["Education","Fourth-Year Engineering Student","DJ Sanghvi College of Engineering",["Focus areas: software development, generative AI, data engineering, data science, business analytics, full-stack development"]],
+["Internship","Business Development & Research Analysis Intern","Jolly Clamps Pvt. Ltd.",["International market research","Data analysis and research","Competitor intelligence","Lead generation and prospect research","Export market analysis"]],
+["Technical projects","Six public repositories","Latest update "+fmt([...P].sort((a,b)=>b.upd.localeCompare(a.upd))[0].upd),["The internship’s lead-research work links to ClampFinderApp, a lead-intelligence platform built for industrial clamp suppliers","Projects span AI, automation, full-stack apps and data dashboards"]]
+].map((t,i)=>`<details${i==1?" open":""}><summary>${esc(t[1])}<small>${esc(t[0])} · ${esc(t[2])}</small></summary><ul>${t[3].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>`).join("");
+
+/* contact */
+$("cbtns").innerHTML=`<a class="btn p" href="${CFG.gh}" target="_blank" rel="noopener">GitHub</a>`+(CFG.linkedin?`<a class="btn" href="${esc(CFG.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`:"")+(CFG.resume?`<a class="btn" href="${esc(CFG.resume)}" target="_blank" rel="noopener">Download resume</a>`:"")+(CFG.email?`<a class="btn" href="mailto:${esc(CFG.email)}">Email</a>`:"");
+if(CFG.email){$("cform").hidden=false;const t0=Date.now();$("cform").addEventListener("submit",e=>{e.preventDefault();const f=e.target,n=$("cn").value.trim(),m=$("ce").value.trim(),b=$("cm").value.trim(),er=$("cerr");
+  if(f.website.value||Date.now()-t0<3000)return;if(n.length<2)return er.textContent="Please enter your name.";if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))return er.textContent="Please enter a valid email.";if(b.length<10)return er.textContent="Please write at least 10 characters.";
+  er.textContent="";location.href=`mailto:${CFG.email}?subject=${encodeURIComponent("Portfolio message from "+n)}&body=${encodeURIComponent(b+"\n\nFrom: "+n+" <"+m+">")}`})}
+
+/* skill constellation: 3D nodes projected on a canvas */
+const cv=$("cons"),cx=cv.getContext("2d");let CW,CH,rotY=0,rotX=.35,drag=null,selS=null,auto=!reduce;
+const nodes=SK.map((s,i)=>{const n=SK.length,y=1-2*(i+.5)/n,r=Math.sqrt(1-y*y),t=i*2.399963;return{name:s[0],pr:s[1],x:Math.cos(t)*r,y:y,z:Math.sin(t)*r,sx:0,sy:0,sc:1}});
+const rel=n=>nodes.filter(o=>o!=n&&o.pr.some(p=>n.pr.includes(p))&&o.pr.length<ALL.length&&n.pr.length<ALL.length);
+const tcol=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function csize(){const d=Math.min(devicePixelRatio||1,2),r=cv.getBoundingClientRect();CW=r.width;CH=r.height;cv.width=CW*d;cv.height=CH*d;cx.setTransform(d,0,0,d,0,0)}
+function cdraw(){const b=tcol("--blue"),o=tcol("--org"),ink=tcol("--ink"),ln=tcol("--line"),R=Math.min(CW,CH)*.36;cx.clearRect(0,0,CW,CH);
+  const cy=Math.cos(rotY),sy=Math.sin(rotY),cxx=Math.cos(rotX),sx=Math.sin(rotX);
+  nodes.forEach(n=>{let x=n.x*cy+n.z*sy,z=-n.x*sy+n.z*cy,y=n.y*cxx-z*sx;z=n.y*sx+z*cxx;const s=1/(1.9-z*.6);n.sx=CW/2+x*R*s*1.9;n.sy=CH/2+y*R*s*1.9;n.sc=s;n.z2=z});
+  const sr=selS?rel(selS):[];
+  nodes.forEach(n=>nodes.forEach(m=>{if(n>=m||n.pr.length>=ALL.length||m.pr.length>=ALL.length||!n.pr.some(p=>m.pr.includes(p)))return;const hi=selS&&(n==selS&&sr.includes(m)||m==selS&&sr.includes(n));cx.globalAlpha=hi?.95:selS?.06:.22;cx.strokeStyle=hi?o:b;cx.lineWidth=hi?2:1;cx.beginPath();cx.moveTo(n.sx,n.sy);cx.lineTo(m.sx,m.sy);cx.stroke()}));
+  [...nodes].sort((a,b)=>a.z2-b.z2).forEach(n=>{const on=!selS||n==selS||sr.includes(n),dim=!n.pr.length;cx.globalAlpha=(on?1:.25)*(.45+.55*n.sc*1.3>1?1:.45+.55*n.sc*1.3);
+    cx.beginPath();cx.arc(n.sx,n.sy,(n==selS?9:6)*n.sc*1.6,0,7);if(dim){cx.setLineDash([3,3]);cx.strokeStyle=b;cx.stroke();cx.setLineDash([])}else{cx.fillStyle=n==selS?o:b;cx.shadowColor=n==selS?o:b;cx.shadowBlur=14;cx.fill();cx.shadowBlur=0}
+    cx.fillStyle=ink;cx.font="600 "+Math.round(12*Math.min(1.3,n.sc*1.5))+"px JetBrains Mono,monospace";cx.textAlign="center";cx.fillText(n.name,n.sx,n.sy-12*n.sc*1.6-3)});cx.globalAlpha=1}
+function pick(name){selS=selS&&selS.name==name?null:nodes.find(n=>n.name==name);$("skchips").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",!!selS&&b.textContent==selS.name));
+  if(!selS){$("sktitle").textContent="Pick a skill";$("skinfo").textContent="Each dashed skill is one Harsh lists but that has no public repository evidence yet.";return}
+  $("sktitle").textContent=selS.name;const r=rel(selS).map(n=>n.name);
+  $("skinfo").innerHTML=selS.pr.length?(selS.pr.length==ALL.length?"Used across every project.":"Used in: "+selS.pr.map(p=>`<a href="${CFG.gh}/${p}" target="_blank" rel="noopener">${esc(p)}</a>`).join(", ")+(r.length?`.<br>Connected skills: ${esc(r.join(", "))}.`:"")):"Listed by Harsh as a focus area. No public repository demonstrates it yet, so it is not linked to a project."}
+$("skchips").innerHTML=SK.map(s=>`<button aria-pressed="false" class="${s[1].length?"":"dim"}">${esc(s[0])}</button>`).join("");
+$("skchips").addEventListener("click",e=>{if(e.target.tagName=="BUTTON")pick(e.target.textContent)});
+cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,m:0};auto=false;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener("pointermove",e=>{if(!drag)return;rotY+=(e.clientX-drag.x)*.008;rotX=Math.max(-1,Math.min(1,rotX+(e.clientY-drag.y)*.006));drag.m+=Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y);drag.x=e.clientX;drag.y=e.clientY});
+cv.addEventListener("pointerup",e=>{if(drag&&drag.m<6){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;const h=nodes.filter(n=>Math.hypot(n.sx-x,n.sy-y)<22).sort((a,b)=>b.z2-a.z2)[0];if(h)pick(h.name)}drag=null});
+csize();addEventListener("resize",csize);
+let consVis=true;new IntersectionObserver(e=>consVis=e[0].isIntersecting).observe(cv);
+
+/* hero 3D */
+let G=null,fcount=0,ft=performance.now(),heroVis=true;
+(function hero(){const c=$("gl");if(!window.THREE){c.remove();return}let R;try{R=new THREE.WebGLRenderer({canvas:c,antialias:true,alpha:true})}catch(e){c.remove();return}
+  R.setPixelRatio(Math.min(devicePixelRatio,1.5));const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,1,.1,100);C.position.z=9;const g=new THREE.Group();S.add(g);
+  const N=1300,pos=new Float32Array(N*3);for(let i=0;i<N;i++){const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),t=i*2.399963;pos.set([Math.cos(t)*r*2.5,y*2.5,Math.sin(t)*r*2.5],i*3)}
+  const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pos,3));
+  const gm=new THREE.PointsMaterial({size:.035,transparent:true,opacity:.85}),globe=new THREE.Points(pg,gm);
+  const wm=new THREE.LineBasicMaterial({transparent:true,opacity:.5}),ico=new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.IcosahedronGeometry(1.9,1)),wm);
+  const om=new THREE.LineBasicMaterial({}),ws=new THREE.Group(),ed=(geo,m)=>new THREE.LineSegments(new THREE.EdgesGeometry(geo),m);
+  const mon=ed(new THREE.BoxGeometry(1.5,.95,.07),om);mon.position.y=.35;const st=ed(new THREE.CylinderGeometry(.06,.06,.45,8),om);st.position.y=-.35;const bs=ed(new THREE.BoxGeometry(.7,.04,.4),om);bs.position.y=-.58;ws.add(mon,st,bs);
+  const rg=new THREE.BufferGeometry(),rp=new Float32Array(420*3);for(let i=0;i<420;i++){const a=Math.random()*6.283,r=3.2+Math.random()*1.3;rp.set([Math.cos(a)*r,(Math.random()-.5)*2.4,Math.sin(a)*r],i*3)}rg.setAttribute("position",new THREE.BufferAttribute(rp,3));
+  const rm=new THREE.PointsMaterial({size:.05,transparent:true,opacity:.9}),ring=new THREE.Points(rg,rm);
+  const lab=["Py","JS","TS","React","SQL","AI"],sprites=lab.map((t,i)=>{const k=document.createElement("canvas");k.width=k.height=128;const x=k.getContext("2d");x.fillStyle="#0b1020cc";x.beginPath();x.arc(64,64,58,0,7);x.fill();x.strokeStyle="#35d6ff";x.lineWidth=4;x.stroke();x.fillStyle="#fff";x.font="700 38px sans-serif";x.textAlign="center";x.fillText(t,64,77);
+    const s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(k),transparent:true}));s.scale.set(.8,.8,1);s.userData.a=i/lab.length*6.283;g.add(s);return s});
+  g.add(globe,ico,ws,ring);const colors=()=>{const d=document.documentElement.dataset.theme!="light";
+    gm.color.set(d?0x35d6ff:0x1d6fe0);wm.color.set(d?0xa855ff:0x7a45e6);om.color.set(d?0xff5fd2:0xd0359f);rm.color.set(d?0xff5fd2:0xd0359f)};colors();G={colors};
+  let mx=0,my=0;addEventListener("pointermove",e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+  function rs(){const w=c.clientWidth,h=c.clientHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();const wide=w>860;g.position.set(wide?3:0,wide?0:2.6,0);g.scale.setScalar(wide?1:.7)}rs();addEventListener("resize",rs);
+  new IntersectionObserver(e=>heroVis=e[0].isIntersecting).observe(c);let t=0;
+  (function loop(){requestAnimationFrame(loop);const now=performance.now();fcount++;if(now-ft>1000){$("fps").textContent=fcount+" fps";fcount=0;ft=now}
+    if(consVis){if(auto)rotY+=.004;cdraw()}
+    if(!heroVis||document.hidden)return;t+=.01;if(!reduce){globe.rotation.y=t*.3;ico.rotation.y=-t*.5;ico.rotation.x=t*.2;ring.rotation.y=t*.4;ws.rotation.y=Math.sin(t)*.5;ws.position.y=Math.sin(t*1.4)*.12}
+    sprites.forEach(s=>{const a=s.userData.a+t*.5;s.position.set(Math.cos(a)*3.6,Math.sin(a*1.3)*1.2,Math.sin(a)*3.6)});
+    g.rotation.x+=(my*.5-g.rotation.x)*.05;g.rotation.z+=(-mx*.2-g.rotation.z)*.05;C.position.x+=(mx*1.2-C.position.x)*.05;C.lookAt(0,0,0);R.render(S,C)})()})();
+if(!G)(function l(){if(consVis){if(auto)rotY+=.004;cdraw()}requestAnimationFrame(l)})();
+
+/* mouse polygon network: dots drift and flee the cursor, and the cursor leaves a fading trail of new dots joined into polygons */
+(function(){const c=$("net"),x=c.getContext("2d");let w,h,pts=[],tr=[],mx=-999,my=-999,lx=-999,ly=-999,fr=0,b="#35d6ff",v="#a855ff",o="#ff5fd2";
+  function rs(){const d=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);pts=Array.from({length:Math.round(Math.min(70,w*h/22000))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,l:1}))}
+  rs();addEventListener("resize",rs);
+  addEventListener("pointermove",e=>{if(e.pointerType=="touch")return;mx=e.clientX;my=e.clientY;if(!reduce&&Math.hypot(mx-lx,my-ly)>28){lx=mx;ly=my;tr.push({x:mx,y:my,l:1,vx:0,vy:0});if(tr.length>16)tr.shift()}});
+  document.addEventListener("mouseleave",()=>{mx=my=-999});
+  (function f(){requestAnimationFrame(f);if(document.hidden)return;if(fr++%40==0){b=tcol("--blue");v=tcol("--vio");o=tcol("--org")}x.clearRect(0,0,w,h);
+    for(const p of pts){if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;const dx=p.x-mx,dy=p.y-my,d=Math.hypot(dx,dy);if(d<130&&d>0){p.x+=dx/d*.9;p.y+=dy/d*.9}}}
+    tr.forEach(t=>t.l-=.016);tr=tr.filter(t=>t.l>0);
+    
+    const all=pts.concat(tr);if(mx>-900)all.push({x:mx,y:my,l:1,cur:1});x.lineWidth=1;
+    const R=118,ok=(p,q)=>Math.hypot(p.x-q.x,p.y-q.y)<((p.cur||q.cur)?165:R),nr=all.map(()=>[]);
+    for(let i=0;i<all.length;i++)for(let j=i+1;j<all.length;j++)if(ok(all[i],all[j]))nr[i].push(j);
+    for(let i=0;i<all.length;i++){const p=all[i],L=nr[i];for(let a=0;a<L.length;a++)for(let c=a+1;c<L.length;c++){const q=all[L[a]],r=all[L[c]];if(!ok(q,r))continue;const cu=p.cur||q.cur||r.cur,lf=Math.min(p.l,q.l,r.l),per=(Math.hypot(p.x-q.x,p.y-q.y)+Math.hypot(q.x-r.x,q.y-r.y)+Math.hypot(r.x-p.x,r.y-p.y))/3;
+      x.globalAlpha=(cu?.22:.1)*lf*Math.max(0,1-per/(cu?165:R));x.fillStyle=cu?o:v;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.lineTo(r.x,r.y);x.closePath();x.fill()}}
+    for(let i=0;i<all.length;i++){const p=all[i];if(!p.cur){x.globalAlpha=.7*p.l;x.fillStyle=p.vx===0?o:b;x.beginPath();x.arc(p.x,p.y,p.vx===0?2.2:1.7,0,7);x.fill()}
+      for(const j of nr[i]){const q=all[j],d=Math.hypot(p.x-q.x,p.y-q.y),cu=p.cur||q.cur;x.globalAlpha=Math.max(0,1-d/(cu?165:R))*(cu?.6:.26)*Math.min(p.l,q.l);x.strokeStyle=cu?o:v;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+    x.globalAlpha=1})()})();
+
+/* boot terminal */
+(function(){const L=[["pr","> Initializing Harsh’s Developer Universe..."],["","> Loading repositories..."],["ok","> AI Systems: Online"],["ok","> Projects: Loaded ("+P.length+")"],["","> Welcome, Explorer!"]],el=$("boot");let li=0,ci=0,cur;
+  if(reduce){el.innerHTML=L.map(l=>`<div class="${l[0]}">${esc(l[1])}</div>`).join("");return}
+  (function s(){if(li>=L.length)return;if(!cur){cur=document.createElement("div");cur.className=L[li][0];el.appendChild(cur)}cur.textContent=L[li][1].slice(0,++ci);if(ci>=L[li][1].length){li++;ci=0;cur=null;setTimeout(s,320)}else setTimeout(s,22)})()})();
+
+/* theme + cursor + dev mode */
+
+const cur=$("cur");addEventListener("pointermove",e=>{cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";const hov=e.target.closest("a,button,.card,#cons");cur.style.width=cur.style.height=hov?"44px":"26px"});
+function dev(on){document.body.classList.toggle("dev",on);return on}
+const KC=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];let ki=0;
+addEventListener("keydown",e=>{ki=e.key==KC[ki]?ki+1:(e.key==KC[0]?1:0);if(ki==KC.length){ki=0;const on=dev(!document.body.classList.contains("dev"));tout("Konami code accepted. Developer mode: "+(on?"ON":"OFF"))}});
+
+/* assistant */
+const KB={profile:{name:"Harsh Shah",education:"Fourth-year engineering student at DJ Sanghvi College of Engineering",interests:["Software Development","Generative AI","Data Engineering","Data Science","Business Analytics","Full-Stack Development"],internship:{role:"Business Development & Research Analysis Intern",company:"Jolly Clamps Pvt. Ltd.",exposure:["International market research","Data analysis and research","Competitor intelligence","Lead generation and prospect research","Export market analysis"]},github:CFG.gh},
+ projects:P.map(p=>({name:p.id,url:CFG.gh+"/"+p.id,summary:p.d,categories:p.cats,languages:p.langs,stack:p.stack,details:p.hl,live_demo:p.live||undefined,last_updated:p.upd})),
+ skills:SK.map(s=>({skill:s[0],evidenced_in:s[1].length==ALL.length?"all projects":s[1]}))};
+const log=$("log");let busy=false,hist=[];
+const md=t=>{let o="",ul=false;for(const l of esc(t).split("\n")){const m=l.match(/^\s*[-*•]\s+(.*)/);if(m){if(!ul){o+="<ul>";ul=true}o+="<li>"+m[1]+"</li>"}else{if(ul){o+="</ul>";ul=false}if(l.trim())o+="<p>"+l+"</p>"}}return(ul?o+"</ul>":o).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")};
+const say=(c,h)=>{const d=document.createElement("div");d.className="m "+c;d.innerHTML=h;log.appendChild(d);log.scrollTop=log.scrollHeight;return d};
+say("a",md("Hi, I’m **Harsh AI**. I answer from Harsh’s real repositories and background. Try a question below."));
+const SG=["What technologies does Harsh use?","Explain ClampFinderApp","Strongest technical projects?","Does he have Generative AI experience?","Why should we hire Harsh?"];
+$("sg").innerHTML=SG.map(s=>`<button type="button">${esc(s)}</button>`).join("");
+function demo(q){const s=q.toLowerCase(),p=P.find(p=>s.includes(p.id.toLowerCase().replace("app",""))||s.includes(p.id.toLowerCase()));
+  if(p)return`**${p.id}**: ${p.d}\n${p.hl.map(h=>"- "+h).join("\n")}`;
+  if(/tech|stack|skill/.test(s))return"Technologies with evidence in the repos:\n"+SK.filter(k=>k[1].length&&k[1].length<ALL.length).map(k=>"- **"+k[0]+"**: "+k[1].join(", ")).join("\n");
+  if(/generative|genai|llm/.test(s))return"Generative AI is a stated focus area. The public repos show AI-driven products (ClampFinderApp, TicketScan, AgroGyanGPT), but I can’t confirm LLM-specific work from the code I reviewed.";
+  if(/hire|why/.test(s))return"- Ships end-to-end products: ClampFinderApp, TicketScan and gmail-sender combine backends, frontends and databases\n- Mixes business research (Jolly Clamps internship) with engineering\n- TicketScan has a live demo you can try";
+  return"Strongest projects:\n- **ClampFinderApp**: AI lead intelligence with FastAPI and Next.js\n- **TicketScan**: document extraction and tamper detection, with a live demo\n- **gmail-sender**: OAuth, encrypted tokens and live progress streaming"}
+async function ask(q){q=q.trim();if(!q||busy)return;busy=true;$("aiq").value="";say("u",esc(q));const b=say("a","Thinking…");
+  const prompt=`You are "Harsh AI", the assistant on Harsh Shah’s developer portfolio, talking to recruiters. Answer ONLY from the DATA below. Never invent employers, metrics, dates, certifications or skills. If something is not in the data, say it is not shown in the portfolio. Be concise and concrete, use short bullets, and mention project names. Skills with empty evidence are listed interests only.\n\nDATA:\n${JSON.stringify(KB)}\n\nCHAT SO FAR:\n${hist.join("\n")||"(none)"}\n\nVisitor: ${q}\nAnswer:`;
+  try{const sm=await(window.claude&&window.claude.use?window.claude.use("sample"):null);if(!sm)throw{};const r=await sm(prompt,{cache:false,onText:({text})=>{b.innerHTML=md(text);log.scrollTop=log.scrollHeight}});b.innerHTML=md(r.text);hist.push("Visitor: "+q,"Assistant: "+r.text);$("mode").textContent="Powered by Claude, grounded in this portfolio"}
+  catch(e){b.innerHTML=md(demo(q))+'<p style="font:11px var(--mono);color:var(--mut)">DEMO MODE: live AI is unavailable here, so this is a prepared answer.</p>';$("mode").textContent="Demo mode: prepared answers"}
+  busy=false}
+$("aif").onsubmit=e=>{e.preventDefault();ask($("aiq").value)};$("sg").onclick=e=>{if(e.target.tagName=="BUTTON")ask(e.target.textContent)};
+const tgl=o=>{$("ai").classList.toggle("on",o);$("fab").setAttribute("aria-expanded",o);if(o)$("aiq").focus()};$("fab").onclick=()=>tgl(!$("ai").classList.contains("on"));$("aix").onclick=()=>tgl(false);
+
+/* matchmaker */
+$("roles").innerHTML=Object.keys(ROLES).map(r=>`<button aria-pressed="false">${esc(r)}</button>`).join("");
+$("roles").onclick=async e=>{const b=e.target.closest("button");if(!b)return;$("roles").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x==b));const role=b.textContent,w=ROLES[role];
+  const sc=P.map(p=>({p,s:p.cats.filter(c=>w.includes(c)).length+(role=="Data Analyst"&&p.id=="Bank-loan-dashboard"?2:0)})).filter(x=>x.s).sort((a,c)=>c.s-a.s||c.p.upd.localeCompare(a.p.upd)).slice(0,3);
+  const local=()=>sc.map(x=>`<div class="r"><b>${esc(x.p.id)}</b><br>${esc(x.p.d)}<br><small style="font-family:var(--mono);color:var(--mut)">Matches ${esc(x.p.cats.filter(c=>w.includes(c)).join(", "))}</small></div>`).join("");
+  $("mres").innerHTML="Matching…";let used=false;
+  try{const sm=await(window.claude&&window.claude.use?window.claude.use("sample"):null);if(!sm)throw{};const r=await sm(`Recommend the 2 or 3 best projects for a "${role}" role from this portfolio. For each give the project name in **bold** and 1-2 sentences on why it fits, using only the data. Be honest about gaps.\n\nDATA:\n${JSON.stringify(KB)}`,{cache:false});$("mres").innerHTML=md(r.text);used=true}catch(_){}
+  if(!used)$("mres").innerHTML=local()+'<p class="note">Demo mode: matched by project categories.</p>'};
+
+/* terminal */
+const tm=$("tm"),tl=$("tlog"),ti=$("ti");
+function tout(t){tl.innerHTML+=esc(t)+"\n";tl.scrollTop=tl.scrollHeight}
+const go=id=>{const el=$(id);el&&el.scrollIntoView({behavior:"smooth"});tm.classList.remove("on")};
+const CMD={help:()=>"Commands: help, about, projects, skills, contact, open <project>, ai, dev, clear, exit (or close)",
+ about:()=>"Harsh Shah. Fourth-year engineering student, DJ Sanghvi College of Engineering. Interests: software, generative AI, data engineering, full-stack.",
+ projects:()=>P.map((p,i)=>(i+1)+". "+p.id+"  ["+p.langs[0]+"]  updated "+p.upd).join("\n")+"\nType: open <project name> to open its GitHub repo.",
+ skills:()=>SK.map(s=>s[0]+(s[1].length?"":" (no public repo evidence)")).join(", "),
+ contact:()=>"GitHub: "+CFG.gh+(CFG.linkedin?"\nLinkedIn: "+CFG.linkedin:"")+(CFG.email?"\nEmail: "+CFG.email:""),
+ ai:()=>{tm.classList.remove("on");tgl(true);return""},
+ dev:()=>"Developer mode: "+(dev(!document.body.classList.contains("dev"))?"ON (fps meter and layout outlines)":"OFF"),
+ clear:()=>{tl.innerHTML="";return""},exit:()=>{tm.classList.remove("on");return""},
+ sudo:()=>"Nice try. Harsh already has root on this universe.",
+ open:a=>{const p=P.find(p=>p.id.toLowerCase()==(a||"").toLowerCase()||p.id.toLowerCase().startsWith((a||"").toLowerCase())&&a);if(!p)return"Usage: open <project>. Try: projects";window.open(CFG.gh+"/"+p.id,"_blank","noopener");return"Opening "+p.id+"…"}};
+tl.innerHTML='<span class="o">Harsh’s Developer Universe terminal.</span> Type <span class="c">help</span>.\n';
+$("tf").onsubmit=e=>{e.preventDefault();const v=ti.value.trim();ti.value="";if(!v)return;tl.innerHTML+='<span class="c">$</span> '+esc(v)+"\n";const[c,...a]=v.split(/\s+/),f=CMD[c.toLowerCase()];const out=f?f(a.join(" ")):"command not found: "+c+". Type help.";if(out)tout(out);
+  if(c=="projects")document.querySelector("#projects").scrollIntoView({behavior:"smooth"});if(c=="skills")document.querySelector("#skills").scrollIntoView({behavior:"smooth"})};
+function ttgl(){const o=!tm.classList.contains("on");tm.classList.toggle("on",o);if(o)ti.focus()}
+$("tbtn").onclick=ttgl;$("tx").onclick=()=>{tm.classList.remove("on");$("tbtn").focus()};CMD.close=CMD.exit;
+addEventListener("keydown",e=>{const t=e.target.tagName;if(e.key=="Escape"){tm.classList.remove("on");tgl(false)}if((e.key=="`"||e.key=="~")&&t!="INPUT"&&t!="TEXTAREA"){e.preventDefault();ttgl()}});
+/* ===== v2: case studies, fit analyzer, command palette, summary, ticker, scroll UI ===== */
+const CS={
+"ClampFinderApp":{prob:"Turning unstructured trade-show catalogues, PDFs and booth photos into verified companies and decision-maker contacts.",flow:["PDF, brochure or booth photo","PyMuPDF parsing","Google Lens logo identification","Apollo + SerpAPI enrichment","Next.js dashboard"]},
+"TicketScan":{prob:"Extracting data from flight, rail and bus tickets, and spotting documents that were edited or tampered with.",flow:["Ticket PDF or image","AI extraction","Forensic checks","Supabase storage","Next.js app"]},
+"Agrogyanchatgpt":{prob:"Giving farmers agricultural help in their own language, with a community space to share knowledge.",flow:["Multilingual interface","FastAPI backend","Auth + community data","Farmer dashboard"]},
+"gmail-sender":{prob:"Sending personalized bulk email through the official Gmail API while keeping a full audit trail.",flow:["React dashboard","Express API","Gmail API (OAuth 2.0)","SQLite (WAL) history","Live progress via SSE"]},
+"Bitcoin-Price-Prediction":{prob:"Understanding Bitcoin price behaviour and forecasting where it may go next.",flow:["Historical prices","Feature engineering (RSI, volume)","Regression models","Forecast + signals"]},
+"Bank-loan-dashboard":{prob:"Showing which applicant factors drive loan approval.",flow:["Loan data (Excel)","Power BI model","KPIs + slicers","Approval insights"]}};
+function openCS(id){const p=P.find(x=>x.id==id),k=CS[id]||{};$("csb").innerHTML=`<p class="tag" style="font:600 12px var(--mono);color:var(--blue)">${esc(p.cats.join(" · "))}</p><h3>${esc(p.id)}</h3><p style="color:var(--mut);font-size:17px">${esc(p.d)}</p>
+<h4>The problem</h4><p>${esc(k.prob||p.d)}</p><h4>How it works</h4><div class="flow">${(k.flow||p.stack).map(f=>`<span>${esc(f)}</span>`).join("<i>→</i>")}</div>
+<h4>What it does</h4><ul>${p.hl.map(h=>`<li>${esc(h)}</li>`).join("")}</ul><h4>Stack</h4><div class="badges">${p.stack.map(s=>`<i>${esc(s)}</i>`).join("")}</div>
+<div class="acts" style="margin-top:24px"><a href="${CFG.gh}/${p.id}" target="_blank" rel="noopener">View code ↗</a>${p.live?`<a href="${esc(p.live)}" target="_blank" rel="noopener" style="background:linear-gradient(90deg,var(--blue),var(--vio));border:0;color:#fff">Live demo ↗</a>`:""}</div>`;$("cs").showModal()}
+$("grid").addEventListener("click",e=>{const b=e.target.closest("[data-cs]");if(b)openCS(b.dataset.cs)});
+$("csx").onclick=()=>$("cs").close();$("cs").addEventListener("click",e=>{if(e.target==$("cs"))$("cs").close()});
+
+/* summary + ticker */
+const top3=[...P].sort((a,b)=>b.upd.localeCompare(a.upd)).slice(0,3);
+$("sum").innerHTML=`<div><h3>30-second summary</h3><small>Everything here comes from real repositories</small></div>
+<div class="k"><b data-n="${P.length}">0</b><span>public repos across AI, automation, full-stack and data</span></div>
+<div class="k"><b data-n="${P.filter(p=>p.live).length}">0</b><span>live demo: TicketScan, AI ticket extraction with tamper detection</span></div>
+<div class="k"><b data-n="${new Set(P.flatMap(p=>p.cats)).size}">0</b><span>focus areas, plus a research internship at Jolly Clamps</span></div>
+<div class="row2"><small>Recently shipped:</small>${top3.map(p=>`<span class="pill">${esc(p.id)} · ${fmt(p.upd)}</span>`).join("")}<span style="flex:1"></span>${CFG.resume?`<a class="btn p" href="${esc(CFG.resume)}" target="_blank" rel="noopener">Download resume</a>`:""}<a class="btn" href="${CFG.gh}" target="_blank" rel="noopener">GitHub</a><a class="btn p" href="#fit">Check fit for a role</a></div>`;
+{const tech=[...new Set(P.flatMap(p=>p.stack))].slice(0,22),t=tech.map(x=>`<span>${esc(x)}</span><span>◆</span>`).join("");$("tk").innerHTML=t+t}
+
+/* command palette */
+const pal=$("pal"),pq=$("pq"),pr=$("pr");let pl=[],ps=0;const jump=id=>$(id).scrollIntoView({behavior:"smooth"});
+const ACT=[["Go to Projects",()=>jump("projects")],["Go to Skills",()=>jump("skills")],["Go to Fit Analyzer",()=>jump("fit")],["Go to GitHub activity",()=>jump("github")],["Go to About",()=>jump("about")],["Go to Contact",()=>jump("contact")],...P.map(p=>["Case study: "+p.id,()=>openCS(p.id)]),["Open Ask Harsh AI",()=>tgl(true)],["Open terminal",()=>ttgl()],["GitHub profile",()=>window.open(CFG.gh,"_blank","noopener")],...P.filter(p=>p.live).map(p=>["Live demo: "+p.id,()=>window.open(p.live,"_blank","noopener")])];
+function prender(){const s=pq.value.toLowerCase();pl=ACT.filter(a=>a[0].toLowerCase().includes(s));ps=Math.min(ps,Math.max(0,pl.length-1));pr.innerHTML=pl.map((a,i)=>`<li role="option" data-i="${i}" aria-selected="${i==ps}">${esc(a[0])}</li>`).join("")||"<li>No matches</li>"}
+function pgo(){const a=pl[ps];if(!a)return;pal.close();a[1]()}
+const popen=()=>{pq.value="";ps=0;prender();pal.showModal();pq.focus()};$("kbtn").onclick=popen;
+addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()=="k"){e.preventDefault();pal.open?pal.close():popen()}});
+pq.oninput=()=>{ps=0;prender()};pq.onkeydown=e=>{if(e.key=="ArrowDown"){e.preventDefault();ps=Math.min(pl.length-1,ps+1);prender()}else if(e.key=="ArrowUp"){e.preventDefault();ps=Math.max(0,ps-1);prender()}else if(e.key=="Enter")pgo()};
+pr.onclick=e=>{const li=e.target.closest("li[data-i]");if(li){ps=+li.dataset.i;pgo()}};pal.addEventListener("click",e=>{if(e.target==pal)pal.close()});
+
+/* fit analyzer: instant keyword match against real repo evidence, then an AI assessment */
+const MT=[["Python",/\bpython\b/i],["JavaScript",/javascript|\bjs\b/i],["TypeScript",/typescript/i],["React",/\breact/i],["Next.js",/next\.?js/i],["Node.js",/node\.?js|\bnode\b/i],["FastAPI",/fastapi/i],["SQL",/\bsql\b|postgres|database/i],["Power BI",/power ?bi/i],["Machine Learning",/machine learning|\bml\b|scikit|regression|forecast|predictive/i],["Data Engineering",/data engineer|\betl\b|data pipeline/i],["APIs",/\bapis?\b|\brest/i],["Git",/\bgit(hub)?\b/i]];
+const GP=[["Generative AI / LLMs",/generative ai|genai|\bllms?\b|large language|langchain|openai/i,"Listed as a focus area; no public repo demonstrates it yet"],["RAG",/\brag\b|retrieval/i,"Not shown in public repos"],["Cloud (AWS / Azure / GCP)",/\baws\b|azure|\bgcp\b|google cloud/i,"Not shown in public repos"],["Docker / Kubernetes",/docker|kubernetes|k8s/i,"Not shown in public repos"],["CI/CD / DevOps",/ci\/cd|devops|jenkins/i,"Not shown in public repos"],["Java / C++ / Go",/\bjava\b|c\+\+|\bgolang\b/i,"Not shown in public repos"],["Django / Flask",/django|flask/i,"Not shown in public repos"],["Tableau / Spark / Airflow",/tableau|spark|airflow|kafka|hadoop/i,"Not shown in public repos"]];
+async function fit(){const jd=$("jd").value.trim(),out=$("jdout");if(jd.length<30){out.textContent="Paste a longer job description first (at least a couple of lines).";return}
+  const ok=MT.filter(m=>m[1].test(jd)).map(m=>{const sk=SK.find(s=>s[0]==m[0]);return{n:m[0],pr:sk&&sk[1].length<ALL.length?sk[1]:[]}}),no=GP.filter(g=>g[1].test(jd)),tot=ok.length+no.length,pct=tot?Math.round(ok.length/tot*100):0;
+  if(!tot){out.textContent="No recognizable technologies found in that text. Try pasting the full requirements section.";return}
+  out.innerHTML=`<b>Keyword coverage: ${pct}%</b><div class="meter" role="img" aria-label="${pct} percent"><span id="mt" style="width:0"></span></div><h4>Matched in real projects</h4><div class="badges">${ok.map(o=>`<i class="ok" title="${esc(o.pr.join(", "))}">${esc(o.n)}${o.pr.length?" · "+esc(o.pr.slice(0,2).join(", ")):""}</i>`).join("")||"<span>None found</span>"}</div><h4>Not shown in public repos</h4><div class="badges">${no.map(g=>`<i class="no" title="${esc(g[2])}">${esc(g[0])}</i>`).join("")||"<span>No gaps detected</span>"}</div><h4>AI assessment</h4><div id="jai" class="jai">Thinking…</div>`;
+  requestAnimationFrame(()=>{$("mt").style.width=pct+"%"});
+  try{const sm=await(window.claude&&window.claude.use?window.claude.use("sample"):null);if(!sm)throw{};
+    const r=await sm(`You are Harsh AI. A recruiter pasted a job description. Using ONLY the DATA, write: **Overall fit** (one honest line), **Strengths** (3 bullets citing project names), **Gaps** (honest bullets), **Suggestion** (one line). Never invent experience or skills.\n\nJOB DESCRIPTION:\n${jd.slice(0,4000)}\n\nDATA:\n${JSON.stringify(KB)}`,{cache:false,onText:({text})=>{$("jai").innerHTML=md(text)}});$("jai").innerHTML=md(r.text)}
+  catch(e){$("jai").innerHTML="<p>DEMO MODE: live AI is unavailable here, so only the keyword match above is shown. It compares the text with technologies actually used in the repositories.</p>"}}
+$("jdgo").onclick=fit;$("jdex").onclick=()=>{$("jd").value="We are looking for an AI / Full-Stack Engineer to build document-processing products. You will build APIs with Python and FastAPI, create React and Next.js interfaces, work with SQL databases, and apply machine learning. Experience with LLMs, Docker and AWS is a plus.";fit()};
+
+/* scroll progress, nav highlight, magnetic buttons, count-up */
+const spy=["projects","skills","match","fit","github","about","contact"].map(id=>[id,$(id)]),navL=document.querySelectorAll(".n a.l");
+function onScroll(){const m=document.documentElement.scrollHeight-innerHeight;document.documentElement.style.setProperty("--p",m>0?scrollY/m:0);let c2="";for(const[id,el]of spy)if(el.getBoundingClientRect().top<innerHeight*.4)c2=id;navL.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+c2))}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+document.addEventListener("pointermove",e=>{const b=e.target.closest&&e.target.closest(".btn");if(!b||reduce||e.pointerType=="touch")return;const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.16}px,${(e.clientY-r.top-r.height/2)*.26}px)`});
+document.addEventListener("pointerout",e=>{const b=e.target.closest&&e.target.closest(".btn");if(b)b.style.transform=""});
+const cu=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cu.unobserve(e.target);const el=e.target,n=+el.dataset.n;if(reduce){el.textContent=n;return}const t0=performance.now();(function s(t){const k=Math.min(1,(t-t0)/900);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(s)})(t0)}),{threshold:.4});
+document.querySelectorAll("[data-n]").forEach(el=>cu.observe(el));
+</script>
+</body>
+</html>
